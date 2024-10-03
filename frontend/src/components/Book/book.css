@@ -1,0 +1,141 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%;
+  background-image: url("./../../../public/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Container styles */
+.bookie {
+  padding-top: 5rem !important;
+  width: 100%;
+  height: 100%;
+  padding: 120px;
+  display: flex;
+}
+
+.books-container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+/* Book card styles */
+.book-card {
+  position: relative;
+  width: 100%;
+  max-width: 300px;
+  padding: 20px;
+  background-color: #ffe4e1;
+  border-radius: 8px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  transition: transform 0.3s, box-shadow 0.3s;
+  overflow: hidden;
+}
+
+.book-card.dark {
+  background-color: #333;
+  color: #fff;
+}
+
+.book-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 15px 20px rgba(0, 0, 0, 0.2);
+}
+
+.dot {
+  position: absolute;
+  top: -27px;
+  right: -20px;
+  width: 60px;
+  height: 80px;
+  background-color: #ec93b0;
+  border-radius: 50%;
+  transition: transform 0.5s;
+  z-index: 1;
+}
+.book-card.dark .dot{
+  background-color: #b04b4baa;
+}
+.book-card:hover .dot {
+  transform: scale(15);
+}
+
+.book-image {
+  position: relative;
+  width: 100px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+  z-index: 2;
+}
+
+.book-name {
+  position: relative;
+  color: #c51550;
+  font-size: 1.5rem;
+  margin: 10px 0;
+  z-index: 2;
+}
+
+.book-author {
+  position: relative;
+  color: #555;
+  font-size: 1rem;
+  margin: 5px 0;
+  z-index: 2;
+}
+
+.book-rating {
+  position: relative;
+  color: #333;
+  font-size: 1rem;
+  margin: 5px 0;
+  z-index: 2;
+}
+
+
+.book-card.dark .book-name,
+.book-card.dark .book-author,
+.book-card.dark .book-rating {
+  color: #fff;
+}
+
+.book-card:hover .book-name,
+.book-card:hover .book-author,
+.book-card:hover .book-rating {
+  color: #fff;
+  transition: color 0.3s;
+}
+
+
+@media (max-width: 1200px) {
+  .book-card {
+      max-width: 250px;
+  }
+}
+
+@media (max-width: 992px) {
+  .book-card {
+      max-width: 200px;
+  }
+}
+
+@media (max-width: 768px) {
+  .book-card {
+      max-width: 100%;
+  }
+}

@@ -1,0 +1,168 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100%; 
+  background-image: url("./../../../public/bg.jpg");
+  background-size: cover; 
+  background-position: center; 
+  background-repeat: no-repeat;
+}
+
+body.dark {
+  background-image: url("./../../../public/darkmode_bg.png");
+}
+
+.content {
+  
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: -70px;
+  flex-direction: row;
+  gap: 100px;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.content.dark {
+ color: white;
+}
+
+@keyframes float {
+  0% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(35px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+.grp {
+  height: 500px;
+  width: 600px;
+  transition: background-image 0.5s ease;
+  animation: float 5s ease-in-out infinite;
+}
+
+.text {
+  margin-top: 30px;
+  max-width: 500px;
+}
+
+.para {
+  font-size: 15px;
+  color: rgb(52, 51, 51);
+  font-family: Montserrat;
+}
+
+.para.dark {
+  color: #ddd;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+.head {
+  color: #c51550;
+  overflow: hidden;
+  font-family: Signika;
+  white-space: nowrap;
+  animation: typing 1.5s forwards;
+  font-size: 2.0rem;
+  width: 0;
+}
+.icons{
+  color:#c51550;
+}
+.icons.dark{
+  color:#ff6b81  ;
+}
+.head.dark {
+  color: #ff6b81;
+}
+
+.sub {
+  color: #282727;
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+}
+
+.sub.dark {
+  color: white;
+}
+
+.redhead {
+  font-size: 1rem;
+  color: #c51550;
+}
+
+.redhead.dark {
+  color: #ff6b81;
+}
+
+@media (max-width: 1200px) {
+  .grp {
+    height: 450px;
+    width: 500px;
+  }
+  .content {
+    gap: 50px;
+  }
+}
+
+@media (max-width: 1000px) {
+  .grp {
+    height: 350px;
+    width: 400px;
+  }
+  .content {
+    gap: 50px;
+    margin-top: -50px;
+  }
+}
+
+@media (max-width: 900px) {
+  .content {
+    flex-direction: column-reverse;
+    margin-top: 90px;
+    gap: 0px;
+    margin-bottom: 100px;
+  }
+}
+
+@media (max-width: 600px) {
+  .content {
+    margin-top: 100px;
+  }
+  .head {
+    font-size: 1.5rem;
+  }
+  .para {
+    font-size: 13px;
+  }
+  .sub {
+    font-size: 1.2rem;
+  }
+}
+@media(max-width:500px){
+  .text{
+    width: 90%;
+  }
+  .grp{
+    height: 300px;
+    width: 350px; 
+  }
+}

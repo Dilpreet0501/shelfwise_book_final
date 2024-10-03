@@ -1,0 +1,147 @@
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-image: url("./../../../public/bg.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+body.dark {
+  background-image: url("./../../../public/darkmode_bg.png"); 
+}
+
+.form-container {
+  background: transparent;
+  color: rgb(52, 51, 51);
+  padding: 30px;
+  border-radius: 10px;
+  border: 1px solid #c36969;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  max-width: 700px;
+  margin: 50px auto;
+  font-family: Arial, sans-serif;
+  transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+.form-container.dark {
+  background-color: #222;
+  border-color: #555;
+  color: #ddd;
+}
+
+.form-title {
+  margin-top: 50px;
+  text-align: center;
+  color: #c51550;
+  margin-bottom: 30px;
+  font-size: 2.6rem;
+}
+
+.form-title.dark {
+  color: #ff6b81;
+}
+
+.question-title {
+  color: rgb(79, 77, 77);
+  margin-bottom: 20px;
+  font-size: 1.5em;
+}
+
+.question-title.dark {
+  color: #ddd;
+}
+
+.options-container {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 30px;
+}
+
+.option-label {
+  background: rgba(201, 149, 149, 0.2);
+  padding: 10px;
+  margin-bottom: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background 0.3s ease;
+}
+
+.option-label:hover {
+  background: rgba(242, 89, 89, 0.2);
+}
+
+.option-label input {
+  margin-right: 10px;
+}
+
+.option-label.dark {
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.option-label.dark:hover {
+  background: rgba(149, 143, 143, 0.2);
+}
+
+.input-text {
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+  margin-bottom: 20px;
+  font-size: 1em;
+  width: calc(100% - 20px);
+}
+
+.input-text.dark {
+  background-color: #444;
+  border-color: #777;
+  color: #ddd;
+}
+
+.button-container {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.button {
+  background: #d15b83;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  text-decoration: none;
+  text-align: center;
+  transition: background 0.3s ease;
+}
+
+.button:hover {
+  background: #c44d7b;
+}
+
+.button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+.button.dark {
+  background: #ff6b81;
+  border-color: #ff6b81;
+}
+
+.button.dark:hover {
+  background: #d15b83;
+  border-color: #d15b83;
+}
+
+  
