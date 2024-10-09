@@ -14,10 +14,10 @@ const Book = () => {
           books.map((book, index) => (
             <BookShow
               key={index}
-              image={book.image_url}
-              name={book.title}
-              rating={book.average_rating.toFixed(1)}  
-              author={book.author}
+              // image={book.image_url}
+              name={book}
+              // rating={book.average_rating}  
+              // author={book.author}
             />
           ))
         ) : (

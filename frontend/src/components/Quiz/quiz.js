@@ -81,6 +81,7 @@ const Quiz = () => {
       });
        
       const data = response.data;
+      console.log(data);
       if (response.status === 200) {
         navigate('/books', { state: { recommendations: data.recommendations } });
       } else {

@@ -33,7 +33,7 @@ const Footer = () => {
                         <ul>
                             <li><NavLink to="/">Home</NavLink></li>
                             <li><NavLink to="/quiz">Explore</NavLink></li>
-                            <li><NavLink to="/books">Popular Books</NavLink></li>
+                            {/* <li><NavLink to="/books">Popular Books</NavLink></li> */}
                             <li><NavLink to="/about">About</NavLink></li>
                             <li><NavLink to="/contact">Contact</NavLink></li>
                         </ul>

@@ -81,7 +81,7 @@ const Navbar = () => {
             <li><NavLink to="/" >Home</NavLink></li>
             <li><NavLink to="/about" >About Us</NavLink></li>
             <li><NavLink to="/quiz" >Explore</NavLink></li>
-            <li onClick={ switchPage } style={{ cursor: 'pointer' }}>Popular Books</li>
+            {/* <li onClick={ switchPage } style={{ cursor: 'pointer' }}>Popular Books</li> */}
             <li><NavLink to="/contact" >Contact Us</NavLink></li>
           </ul>
         </div>
