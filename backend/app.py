@@ -20,7 +20,7 @@ final_dataset = pd.read_pickle('final_dataset.pkl')
 def read_root():
     return {"message": "Book Recommendation API"}
 
-@app.get('/recommend/')
+@app.post('/recommend')
 def recommend(book_name: str):
     try:
         dist, sugg = nn_model.kneighbors(final_dataset[final_dataset.index == book_name], n_neighbors=6)

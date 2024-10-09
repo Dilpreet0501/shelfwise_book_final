@@ -76,7 +76,7 @@ const Quiz = () => {
     e.preventDefault();
     console.log(answers);
     try {
-      const response = await axios.post('https://shelfwise-backend-render.onrender.com/predict', {  
+      const response = await axios.post('https://shelfwise-book-final-backend.onrender.com/recommend', {  
         book_name: answers.lastBook
       });
        
