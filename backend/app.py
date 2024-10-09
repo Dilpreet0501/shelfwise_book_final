@@ -1,8 +1,11 @@
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
+from pydantic import BaseModel
 import joblib
 import pandas as pd
-from fastapi.middleware.cors import CORSMiddleware
+
 app = FastAPI()
+
 
 app.add_middleware(
     CORSMiddleware,
@@ -12,17 +15,23 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-# Load the model and dataset
+
 nn_model = joblib.load('nn_model.pkl')
 final_dataset = pd.read_pickle('final_dataset.pkl')
+
+
+class BookRequest(BaseModel):
+    book_name: str
 
 @app.get('/')
 def read_root():
     return {"message": "Book Recommendation API"}
 
 @app.post('/recommend')
-def recommend(book_name: str):
+def recommend(request: BookRequest):  
+    book_name = request.book_name
     try:
+       
         dist, sugg = nn_model.kneighbors(final_dataset[final_dataset.index == book_name], n_neighbors=6)
         recommendations = [final_dataset.index[sugg[0][i]] for i in range(1, len(sugg[0]))]  # Skip the first as it's the input book itself
         return {"book_name": book_name, "recommendations": recommendations}
